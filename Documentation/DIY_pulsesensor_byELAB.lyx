@@ -1,0 +1,1283 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+\hypersetup{urlcolor=blue}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans helvet
+\font_typewriter default
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 5
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+DIY pulse sensor!
+\end_layout
+
+\begin_layout Section
+Background & Preparation
+\end_layout
+
+\begin_layout Subsection
+Document history
+\end_layout
+
+\begin_layout Standard
+Created by ELAB - the electrical laboratory of the division of Electrical
+ Engineering at the Royal Institute of Technology, Stockholm, Sweden.
+ ELAB has space and equipment for electronics work.
+ At ELAB, you learn about all things electrical, in part by practical constructi
+on, and partly by discussions with members.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "ELAB's website"
+target "https://www.elab.kth.se/"
+
+\end_inset
+
+ https://www.elab.kth.se/
+\end_layout
+
+\begin_layout Standard
+Translated to English by Caroline Dahl, Sven Hedin and Jonas Olson.
+\end_layout
+
+\begin_layout Subsection
+Accompanying files
+\end_layout
+
+\begin_layout Subsubsection
+PCB design files
+\end_layout
+
+\begin_layout Standard
+PCB made in Eagle Cad 6.60.
+ Accompanying files may be opened in all Eagle versions to date.
+\end_layout
+
+\begin_layout Standard
+Included files:
+\end_layout
+
+\begin_layout Itemize
+N0llELAB_final.brd
+\end_layout
+
+\begin_layout Itemize
+N0llELAB_final.sch
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Download Eagle here."
+target "https://www.autodesk.com/products/eagle/free-download"
+
+\end_inset
+
+ https://www.autodesk.com/products/eagle/free-download
+\end_layout
+
+\begin_layout Subsubsection
+Documentation
+\end_layout
+
+\begin_layout Standard
+This document is authored in LyX, a wysiwyg LaTex version.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Get LyX here."
+target "https://www.lyx.org/"
+
+\end_inset
+
+https://www.lyx.org/
+\end_layout
+
+\begin_layout Standard
+Included files:
+\end_layout
+
+\begin_layout Itemize
+DIY_pulsesensor_byELAB.lyx
+\end_layout
+
+\begin_layout Itemize
+DIY_pulsesensor_byELAB.pdf (compiled PDF-version of above)
+\end_layout
+
+\begin_layout Itemize
+instruktioner.pdf (Swedish original instructions)
+\end_layout
+
+\begin_layout Itemize
+Graphics files
+\end_layout
+
+\begin_layout Subsection
+Equipment necessary
+\end_layout
+
+\begin_layout Enumerate
+Pulse sensor kit, see Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Components-of-the-circuit"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Solder iron
+\end_layout
+
+\begin_layout Enumerate
+Solder
+\end_layout
+
+\begin_layout Enumerate
+Solder flux (unless this is part of the solder)
+\end_layout
+
+\begin_layout Section
+The exercise
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Standard
+In this laboratory session we build a pulse detector.
+ Its function is described in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-circuit"
+
+\end_inset
+
+.
+ A finger is placed in between the light-emitting diode (LED1) and the phototran
+sistor (O1).
+ During the systolic phase of the heart beat, heart muscle pumps blood out
+ into peripheral vessels.
+ Local blood volume increases in the finger and more light is absorbed than
+ under the diastolic phase (the cardiac resting phase).
+ The more light that reaches the photo resistor, the better it conducts.
+ This way, the circuit detects light variations.
+ The signal is later amplified so that it manages to drive the light-emitting
+ diode (LED2) that blinks in phase with the pulse.
+\end_layout
+
+\begin_layout Standard
+Your task is to place and solder the components (Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Components-of-the-circuit"
+
+\end_inset
+
+) at their correct sites on the circuit board according to the instructions
+ below so that the finished circuit looks like Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-circuit"
+
+\end_inset
+
+b.
+\end_layout
+
+\begin_layout Subsection
+Soldering 
+\end_layout
+
+\begin_layout Standard
+The components of this kit are through-hole mounted.
+ This means that the leads of components are fit through the holes in the
+ circuit board.
+ The components themselves are mounted through the holes of the PCB so that
+ their leads stick out on the side of the PCB that lacks print, and this
+ is the side where they are soldered on.
+ It is appropriate to mount and solder the smallest components first; the
+ circuit board is unstable on the table when tall components are mounted.
+ A good solder joint necessitates sufficient (but not too much) heat, solder
+ and flux to make the solder wet the site, and solder to achieve an electrically
+ conductive joint between components and circuit board, and heat to liquify
+ the solder and activate the  flux.
+ If the solder already contains  flux, no additional  flux is necessary.
+ 
+\end_layout
+
+\begin_layout Standard
+Heat is added by pushing the tip of the soldering iron onto the component’s
+ leg and the copper trail that it is to be soldered to.
+ Do not push hard.
+ Already prior to this, one may put a very small drop of solder on the tip
+ of the soldering iron in order to achieve better heat conduction.
+ After a second, solder is added by bringing the solder against the site
+ of soldering until it has liquified about the component leg.
+ The amount of solder should be so small that the solder joint appears concave
+ in shape, see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Soldering-joint"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+When soldering is finished, the remainder component leg is clipped close
+ to the solder joint.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+82Ω
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,2 MΩ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R3, R4, R8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+330 kΩ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10MΩ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+22kΩ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R7, R10, R12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 kΩ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R9, R11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100 kΩ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C1, C2, C5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100 nF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C3, C4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4,7 μF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IC1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MCP6004
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+using heat-shrink
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LED1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Clear
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LED2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Matte
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Components-of-the-circuit"
+
+\end_inset
+
+Components of the circuit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graphics/schema.png
+	lyxscale 10
+	width 60page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(a) Circuit diagram
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graphics/populated.jpeg
+	lyxscale 10
+	width 60page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+(b) Completed circuit
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-circuit"
+
+\end_inset
+
+The circuit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graphics/lödfog.png
+	lyxscale 10
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Soldering-joint"
+
+\end_inset
+
+Solder joint
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Graphics/pinout.png
+	lyxscale 10
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Leg-numbering"
+
+\end_inset
+
+Pinout on MCP6004
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Components of the circuit
+\end_layout
+
+\begin_layout Subsection
+Resistors
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Graphics/motstånd.png
+	lyxscale 30
+	height 1.5cm
+
+\end_inset
+
+The resistors are cylinder-shaped with a leg at each end.
+ They are non-directional so it doesn’t matter how you turn them.
+ In this circuit they are mounted standing up (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-circuit"
+
+\end_inset
+
+b) in order to save space.
+ All resistors but one has four colour rings.
+ One reads them by starting at the end where the distance between colour
+ ring and component leg is the smallest.
+ The first three rings represent numbers according to the following table:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+
+\size footnotesize
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="12">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Silver
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Gold
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Black
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Brown
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Red
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Orange
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Yellow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Green
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Blue
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Purple
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Gray
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+White
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These rings denote the resistor’s resistance.
+ The two first rings denote significant figures, while the third ring denotes
+ the power of ten to be multiplied by the significant figures.
+ Thus, if the colour of the third ring denotes the value n, the significant
+ figures should be multiplied by 
+\begin_inset Formula $10^{n}$
+\end_inset
+
+.
+ The unit is Ohm (
+\begin_inset Formula $\Omega$
+\end_inset
+
+).
+ As an example, the rings Gray-Red-Orange denotes 8, 2 and ten to the power
+ of 3 (
+\begin_inset Formula $10^{3}$
+\end_inset
+
+).
+ The result is a resistor with resistance 82,000 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, i.e.
+ 82k
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ The fourth ring denotes manufacturing tolerance and may safely be ignored
+ in this exercise.
+\end_layout
+
+\begin_layout Subsection
+Capacitors 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Graphics/kondensator.png
+	lyxscale 30
+	height 1.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Capacitors in this kit are symmetric so may be turned around at will.
+ Each capacitor is labelled with three numbers - two significant figures
+ and a power of ten.
+ The unit is the picoFarad (1pF).
+ If, for example, it would read “123”, the capacitance is 12*
+\begin_inset Formula $10^{3}$
+\end_inset
+
+, i.e.
+ 12,000pF = 12nF.
+\end_layout
+
+\begin_layout Subsection
+Light emitting diodes (LEDs)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Graphics/lysdiod.png
+	lyxscale 30
+	height 1.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Like all diodes, light emitting diodes (LED1 and LED2) conduct current only
+ in one direction - in through the anode and out through the cathode (the
+ side with the flat spot).
+ So in order to conduct and light up, it has to be mounted in the right
+ direction.
+ How the flat spot should be oriented is shown in the print on the circuit
+ board.
+ 
+\end_layout
+
+\begin_layout Subsection
+Photo transistors
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Graphics/fototransistor.png
+	lyxscale 30
+	height 1.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The photo transistor (O1) is conductive only when illuminated.
+ Just like LEDs, it only works uni-directionally so has to be fit on the
+ PCB the correct way around.
+\end_layout
+
+\begin_layout Subsection
+The integrated circuit (IC)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Graphics/operationsförstärkare.png
+	lyxscale 30
+	height 1.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An integrated circuit (IC), that contains four amplifiers, is part of this
+ build.
+ Its socket is soldered to the PCB, and the IC is fitted within.
+ The IC circuit is the black plastic box labelled 
+\begin_inset Quotes eld
+\end_inset
+
+MCP6004
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Its 14 leads are numbered anti-clockwise according to Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Leg-numbering"
+
+\end_inset
+
+.
+ One starts and ends numbering at the marked end.
+ The IC is fitted in the direction shown on the PCB.
+ The adaptor is fitted similarly, according to its respective mark.
+\end_layout
+
+\begin_layout Standard
+The adaptor is soldered onto the PCB and the IC circuit is pushed into place.
+ The IC may then be removed and exchanged when necessary.
+ The IC circuit is sensitive, so please ensure that the rest of the circuit
+ is correctly soldered before proceeding with pushing the IC circuit into
+ place.
+\end_layout
+
+\begin_layout Subsection
+Battery holder
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Graphics/batterihållare.png
+	lyxscale 30
+	height 1.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The black wire is soldered onto the negative terminal and the red wire is
+ soldered onto the positive terminal.
+\end_layout
+
+\end_body
+\end_document
